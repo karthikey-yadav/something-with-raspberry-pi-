@@ -28,9 +28,31 @@ The instructions cover hardware connections, driver installation, and configurat
 
 ## 💻 Software Setup
 
-### 1. Update & Upgrade
+## 💻 Base System Prep
 ```bash
+# Update OS
 sudo apt update && sudo apt upgrade -y
+
+# Essentials
+sudo apt install -y git cmake curl
+
+---
+
+## now for installing lcd 
+
+# Install LCD Driver 
+# Get the driver helper scripts
+git clone https://github.com/waveshare/LCD-show.git
+cd LCD-show
+
+# Make scripts executable
+chmod +x LCD35-show LCD-hdmi
+
+
+# Default orientation (0°)
+./LCD35-show
+
+
 
 
 
