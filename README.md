@@ -1,4 +1,4 @@
-# SOMETHING-WITH-RASPBERRY-PI-
+# SOMETHING-WITH-RASPBERRY-PI-🍓
 
 
 # 📟 Raspberry Pi 4B with 3.5" LCD Screen Setup
