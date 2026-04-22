@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="900" height="620" font-family="'Courier New', monospace">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1c"/>
+      <stop offset="100%" style="stop-color:#121830"/>
+    </linearGradient>
+    <linearGradient id="rpi" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2040"/>
+      <stop offset="100%" style="stop-color:#0f1428"/>
+    </linearGradient>
+    <linearGradient id="hostGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1030"/>
+      <stop offset="100%" style="stop-color:#150c24"/>
+    </linearGradient>
+    <linearGradient id="lcdGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c2030"/>
+      <stop offset="100%" style="stop-color:#071520"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3cc896"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6080e0"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#dc3246"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bg)" rx="12"/>
+
+  <!-- Grid dots -->
+  <g opacity="0.06">
+    <pattern id="dots" patternUnits="userSpaceOnUse" width="30" height="30">
+      <circle cx="15" cy="15" r="1" fill="#8090c0"/>
+    </pattern>
+    <rect width="900" height="620" fill="url(#dots)"/>
+  </g>
+
+  <!-- Title -->
+  <text x="450" y="34" text-anchor="middle" font-size="18" font-weight="bold" fill="#dc3246" filter="url(#glow)">🍓 Raspberry Pi 4B — 3.5" TFT LCD System Dashboard</text>
+  <text x="450" y="52" text-anchor="middle" font-size="11" fill="#5060a0">Hardware &amp; Software Architecture Block Diagram</text>
+  <line x1="60" y1="62" x2="840" y2="62" stroke="#1e2850" stroke-width="1"/>
+
+  <!-- ──────────────────────────────────── -->
+  <!-- HOST COMPUTER BOX -->
+  <!-- ──────────────────────────────────── -->
+  <rect x="30" y="76" width="840" height="120" rx="10" fill="url(#hostGrad)" stroke="#6040a0" stroke-width="1.5" opacity="0.95"/>
+  <rect x="30" y="76" width="840" height="26" rx="10" fill="#6040a0" opacity="0.7"/>
+  <rect x="30" y="90" width="840" height="12" fill="#6040a0" opacity="0.7"/>
+  <text x="46" y="94" font-size="12" font-weight="bold" fill="#d0b0ff">🖥️  HOST COMPUTER  (Windows / macOS / Linux)</text>
+
+  <!-- RPi Imager -->
+  <rect x="56" y="112" width="210" height="68" rx="8" fill="#1a1030" stroke="#8060d0" stroke-width="1.5"/>
+  <text x="161" y="130" text-anchor="middle" font-size="11" font-weight="bold" fill="#c090ff">Raspberry Pi Imager</text>
+  <text x="161" y="146" text-anchor="middle" font-size="10" fill="#9070c0">Flash OS to MicroSD</text>
+  <text x="161" y="160" text-anchor="middle" font-size="10" fill="#7060a0">Set Wi-Fi, SSH, Username</text>
+  <text x="161" y="172" text-anchor="middle" font-size="10" fill="#7060a0">raspberrypi.local</text>
+
+  <!-- PuTTY -->
+  <rect x="306" y="112" width="210" height="68" rx="8" fill="#0c1a30" stroke="#4080d0" stroke-width="1.5"/>
+  <text x="411" y="130" text-anchor="middle" font-size="11" font-weight="bold" fill="#80c0ff">PuTTY SSH Client</text>
+  <text x="411" y="146" text-anchor="middle" font-size="10" fill="#5090c0">SSH Terminal Access</text>
+  <text x="411" y="160" text-anchor="middle" font-size="10" fill="#4070a0">Port: 22</text>
+  <text x="411" y="172" text-anchor="middle" font-size="10" fill="#4070a0">Headless Setup</text>
+
+  <!-- RealVNC -->
+  <rect x="556" y="112" width="210" height="68" rx="8" fill="#0c2010" stroke="#40c060" stroke-width="1.5"/>
+  <text x="661" y="130" text-anchor="middle" font-size="11" font-weight="bold" fill="#70e090">RealVNC Viewer</text>
+  <text x="661" y="146" text-anchor="middle" font-size="10" fill="#50b070">Remote Desktop GUI</text>
+  <text x="661" y="160" text-anchor="middle" font-size="10" fill="#408060">Port: 5900 (VNC)</text>
+  <text x="661" y="172" text-anchor="middle" font-size="10" fill="#408060">Full Desktop Access</text>
+
+  <!-- ──────────────────────────────────── -->
+  <!-- ARROWS HOST → RPi -->
+  <!-- ──────────────────────────────────── -->
+  <!-- SD Card arrow -->
+  <line x1="161" y1="196" x2="161" y2="232" stroke="#8060d0" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowBlue)"/>
+  <text x="100" y="218" font-size="9" fill="#8060d0">MicroSD</text>
+
+  <!-- SSH arrow -->
+  <line x1="411" y1="196" x2="411" y2="232" stroke="#4080d0" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowBlue)"/>
+  <text x="370" y="218" font-size="9" fill="#4080d0">SSH / Wi-Fi</text>
+
+  <!-- VNC arrow -->
+  <line x1="661" y1="196" x2="661" y2="232" stroke="#40c060" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowBlue)"/>
+  <text x="618" y="218" font-size="9" fill="#40c060">VNC / Wi-Fi</text>
+
+  <!-- ──────────────────────────────────── -->
+  <!-- RASPBERRY PI 4B BOX -->
+  <!-- ──────────────────────────────────── -->
+  <rect x="30" y="238" width="840" height="220" rx="10" fill="url(#rpi)" stroke="#dc3246" stroke-width="2"/>
+  <rect x="30" y="238" width="840" height="26" rx="10" fill="#dc3246" opacity="0.8"/>
+  <rect x="30" y="252" width="840" height="12" fill="#dc3246" opacity="0.8"/>
+  <text x="46" y="256" font-size="12" font-weight="bold" fill="#fff">🍓  RASPBERRY PI 4 MODEL B  —  BCM2711 Quad-Core Cortex-A72 @ 1.8 GHz</text>
+
+  <!-- CPU block -->
+  <rect x="56" y="276" width="160" height="72" rx="7" fill="#101828" stroke="#dc3246" stroke-width="1.5"/>
+  <text x="136" y="294" text-anchor="middle" font-size="11" font-weight="bold" fill="#ff6070">CPU / SoC</text>
+  <text x="136" y="309" text-anchor="middle" font-size="10" fill="#c04050">BCM2711</text>
+  <text x="136" y="323" text-anchor="middle" font-size="10" fill="#904050">Quad-Core A72</text>
+  <text x="136" y="337" text-anchor="middle" font-size="10" fill="#904050">64-bit @ 1.8 GHz</text>
+
+  <!-- RAM block -->
+  <rect x="240" y="276" width="140" height="72" rx="7" fill="#101820" stroke="#3080d0" stroke-width="1.5"/>
+  <text x="310" y="294" text-anchor="middle" font-size="11" font-weight="bold" fill="#6090e0">RAM</text>
+  <text x="310" y="309" text-anchor="middle" font-size="10" fill="#4070b0">LPDDR4</text>
+  <text x="310" y="323" text-anchor="middle" font-size="10" fill="#4070b0">2 / 4 / 8 GB</text>
+  <text x="310" y="337" text-anchor="middle" font-size="10" fill="#4070b0">3200 MHz</text>
+
+  <!-- Wi-Fi block -->
+  <rect x="400" y="276" width="140" height="72" rx="7" fill="#081820" stroke="#30b060" stroke-width="1.5"/>
+  <text x="470" y="294" text-anchor="middle" font-size="11" font-weight="bold" fill="#50d080">Wi-Fi / BT</text>
+  <text x="470" y="309" text-anchor="middle" font-size="10" fill="#40a060">802.11ac 2.4/5 GHz</text>
+  <text x="470" y="323" text-anchor="middle" font-size="10" fill="#40a060">Bluetooth 5.0</text>
+  <text x="470" y="337" text-anchor="middle" font-size="10" fill="#40a060">SSH + VNC</text>
+
+  <!-- MicroSD block -->
+  <rect x="560" y="276" width="130" height="72" rx="7" fill="#101810" stroke="#90b040" stroke-width="1.5"/>
+  <text x="625" y="294" text-anchor="middle" font-size="11" font-weight="bold" fill="#b0d060">MicroSD</text>
+  <text x="625" y="309" text-anchor="middle" font-size="10" fill="#80a040">Raspberry Pi OS</text>
+  <text x="625" y="323" text-anchor="middle" font-size="10" fill="#80a040">Bookworm (64-bit)</text>
+  <text x="625" y="337" text-anchor="middle" font-size="10" fill="#80a040">16GB+ Class 10</text>
+
+  <!-- USB-C Power block -->
+  <rect x="710" y="276" width="140" height="72" rx="7" fill="#181008" stroke="#d07030" stroke-width="1.5"/>
+  <text x="780" y="294" text-anchor="middle" font-size="11" font-weight="bold" fill="#e09050">Power</text>
+  <text x="780" y="309" text-anchor="middle" font-size="10" fill="#c07040">USB-C</text>
+  <text x="780" y="323" text-anchor="middle" font-size="10" fill="#c07040">5V / 3A</text>
+  <text x="780" y="337" text-anchor="middle" font-size="10" fill="#c07040">Official PSU</text>
+
+  <!-- GPIO Header separator line -->
+  <line x1="56" y1="364" x2="844" y2="364" stroke="#2a3560" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="450" y="361" text-anchor="middle" font-size="9" fill="#3a4570">─────  GPIO 40-Pin Header  ─────</text>
+
+  <!-- GPIO pin labels -->
+  <g font-size="9" fill="#4060a0">
+    <text x="80"  y="380">Pin 1  → 3.3V (VCC)</text>
+    <text x="80"  y="392">Pin 6  → GND</text>
+    <text x="80"  y="404">Pin 19 → MOSI (SPI0)</text>
+    <text x="80"  y="416">Pin 21 → MISO (SPI0)</text>
+    <text x="280" y="380">Pin 23 → SCLK (SPI0)</text>
+    <text x="280" y="392">Pin 24 → CE0  (CS)</text>
+    <text x="280" y="404">Pin 18 → GPIO24 (DC)</text>
+    <text x="280" y="416">Pin 22 → GPIO25 (RST)</text>
+    <text x="480" y="380">Pin 12 → GPIO18 (BL)</text>
+    <text x="480" y="392">SPI Bus: 10 MHz</text>
+    <text x="480" y="404">Touch: XPT2046</text>
+    <text x="480" y="416">Driver: waveshare35a</text>
+  </g>
+
+  <!-- Python script indicator -->
+  <rect x="660" y="368" width="200" height="80" rx="7" fill="#0a1818" stroke="#3cc896" stroke-width="1.5"/>
+  <text x="760" y="385" text-anchor="middle" font-size="10" font-weight="bold" fill="#3cc896">script.py</text>
+  <text x="760" y="399" text-anchor="middle" font-size="9" fill="#2a9870">psutil + Pillow</text>
+  <text x="760" y="411" text-anchor="middle" font-size="9" fill="#2a9870">CPU / RAM / Disk / Temp</text>
+  <text x="760" y="423" text-anchor="middle" font-size="9" fill="#2a9870">IP Address / Uptime</text>
+  <text x="760" y="437" text-anchor="middle" font-size="9" fill="#2a9870">→ /dev/fb1 framebuffer</text>
+
+  <!-- Arrow from GPIO to LCD -->
+  <line x1="450" y1="458" x2="450" y2="492" stroke="#3cc896" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="380" y="478" font-size="10" fill="#3cc896">SPI Interface (10 MHz)</text>
+
+  <!-- Arrow from script to LCD -->
+  <line x1="660" y1="450" x2="560" y2="508" stroke="#3cc896" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+
+  <!-- ──────────────────────────────────── -->
+  <!-- LCD DISPLAY BOX -->
+  <!-- ──────────────────────────────────── -->
+  <rect x="220" y="498" width="460" height="100" rx="10" fill="url(#lcdGrad)" stroke="#3cc896" stroke-width="2" filter="url(#softglow)"/>
+  <rect x="220" y="498" width="460" height="24" rx="10" fill="#3cc896" opacity="0.5"/>
+  <rect x="220" y="510" width="460" height="12" fill="#3cc896" opacity="0.5"/>
+  <text x="450" y="515" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">🖥️  3.5" TFT LCD TOUCHSCREEN DISPLAY</text>
+
+  <text x="340" y="540" text-anchor="middle" font-size="10" fill="#40b080">Controller: ILI9486</text>
+  <text x="340" y="553" text-anchor="middle" font-size="10" fill="#40b080">Touch IC: XPT2046</text>
+  <text x="340" y="566" text-anchor="middle" font-size="10" fill="#40b080">Interface: SPI</text>
+  <text x="340" y="579" text-anchor="middle" font-size="10" fill="#309060">Driver: Waveshare LCD-show</text>
+
+  <text x="580" y="540" text-anchor="middle" font-size="10" fill="#40b080">Resolution: 480 × 320 px</text>
+  <text x="580" y="553" text-anchor="middle" font-size="10" fill="#40b080">Size: 3.5 inches diagonal</text>
+  <text x="580" y="566" text-anchor="middle" font-size="10" fill="#40b080">Colors: 65,536 (16-bit RGB)</text>
+  <text x="580" y="579" text-anchor="middle" font-size="10" fill="#309060">Framebuffer: /dev/fb1</text>
+
+  <!-- Legend -->
+  <g font-size="9">
+    <rect x="56" y="510" width="10" height="10" fill="#8060d0" rx="2"/>
+    <text x="70" y="520" fill="#7060b0">Flashing / Setup</text>
+    <rect x="56" y="526" width="10" height="10" fill="#4080d0" rx="2"/>
+    <text x="70" y="536" fill="#5080b0">SSH Connection</text>
+    <rect x="56" y="542" width="10" height="10" fill="#40c060" rx="2"/>
+    <text x="70" y="552" fill="#40b060">VNC Connection</text>
+    <rect x="56" y="558" width="10" height="10" fill="#3cc896" rx="2"/>
+    <text x="70" y="568" fill="#3ca870">SPI / Data Bus</text>
+  </g>
+
+  <!-- Version / author -->
+  <text x="844" y="612" text-anchor="end" font-size="9" fill="#2a3555">github.com/karthikey-yadav  |  MIT License</text>
+</svg>
